@@ -4,7 +4,7 @@
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = { 0x00, 0xAA, 0xBB, 0xCC, 0xDA, 0x02 };
-IPAddress ip(192, 168, 1, 10); //<<< ENTER YOUR IP ADDRESS HERE!!!
+IPAddress ip(10, 42, 0, 2); //<<< ENTER YOUR IP ADDRESS HERE!!!
 
 // Initialize the Ethernet server library
 // with the IP address and port you want to use 
@@ -47,10 +47,10 @@ void loop()
           //serves a different version of a website depending on whether or not the button
           //connected to pin 2 is pressed.
           if (buttonPress == 1) {
-            client.println("<cke:html><cke:body bgcolor=#FFFFFF>LIGHT!</cke:body></cke:html>");
+            client.println("<cke:html><cke:body bgcolor=#FFFFFF>You're house is on fire!</cke:body></cke:html>");
           }
           else if (buttonPress == 0){
-            client.println("<cke:html><cke:body bgcolor=#000000 text=#FFFFFF>DARK!</cke:body></cke:html>");
+            client.println("<cke:html><cke:body bgcolor=#000000 text=#FFFFFF>All Clear!</cke:body></cke:html>");
           }
           
 
